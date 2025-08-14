@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "outDir": "./dist/esm",                      // 默认 ESM 输出目录
+      "declaration": true,                         // 生成 .d.ts
+      "declarationDir": "./dist/types",            // 类型文件输出目录
+      "emitDeclarationOnly": false,                // 不只生成声明
+      "noEmit": false                              // 允许输出
+    },
+    "include": ["src"]
+  }
+  

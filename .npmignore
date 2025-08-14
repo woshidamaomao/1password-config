@@ -1,0 +1,52 @@
+# 源代码文件 - 只发布编译后的文件
+src/
+*.ts
+!*.d.ts
+
+# 开发工具配置
+tsconfig.json
+tsconfig.build.json
+.vscode/
+.idea/
+
+# 测试文件
+test/
+tests/
+__tests__/
+*.test.*
+*.spec.*
+
+# 构建工具
+.build/
+.tmp/
+
+# 日志文件
+*.log
+logs/
+
+# 运行时文件
+.DS_Store
+Thumbs.db
+
+# Git 相关
+.git/
+.gitignore
+
+# npm 相关
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 其他临时文件
+.nyc_output/
+coverage/
+.cache/
+.temp/
+temp/
+
+
+# 文档
+dev.md
+
+examples/

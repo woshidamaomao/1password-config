@@ -1,0 +1,66 @@
+{
+    "name": "1password-config",
+    "version": "0.0.4",
+    "description": "1Password configuration utilities",
+    "keywords": [
+        "1password",
+        "config",
+        "1password-config"
+    ],
+    "author": "Colin",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/woshidamaomao/1password-config.git"
+    },
+    "homepage": "https://github.com/woshidamaomao/1password-config",
+    "bugs": {
+        "url": "https://github.com/woshidamaomao/1password-config/issues"
+    },
+    "type": "module",
+    "main": "./dist/cjs/index.js",
+    "module": "./dist/esm/index.js",
+    "types": "./dist/types/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/esm/index.js",
+            "require": "./dist/cjs/index.js",
+            "types": "./dist/types/index.d.ts"
+        }
+    },
+    "files": [
+        "dist/**/*",
+        "examples/**/*",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "clean": "rm -rf dist",
+        "build:esm": "tsc --project tsconfig.build.json --module ESNext --outDir dist/esm",
+        "build:cjs": "tsc --project tsconfig.build.json --module CommonJS --outDir dist/cjs",
+        "build": "npm run clean && npm run build:esm && npm run build:cjs",
+        "prepublishOnly": "npm run build",
+        "publish:npm": "npm publish",
+        "publish:beta": "npm publish --tag beta",
+        "version:patch": "npm version patch",
+        "version:minor": "npm version minor",
+        "version:major": "npm version major",
+        "example": "tsx examples/demo.ts"
+    },
+    "sideEffects": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "private": false,
+    "dependencies": {
+        "@1password/op-js": "0.1.13"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "tsx": "^4.0.0",
+        "typescript": "^5.0.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}

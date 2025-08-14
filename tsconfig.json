@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",                          // 编译目标
+      "module": "ESNext",                          // 用 ESNext 模块系统
+      "moduleResolution": "Node",                  // Node 风格模块解析
+      "esModuleInterop": true,                     // 允许默认导入 CommonJS 模块
+      "allowSyntheticDefaultImports": true,        // 允许没有默认导出的模块使用默认导入
+      "strict": true,                              // 严格模式
+      "skipLibCheck": true,                        // 跳过类型检查 node_modules
+      "forceConsistentCasingInFileNames": true,    // 强制文件名大小写一致
+      "resolveJsonModule": true,                   // 允许 import JSON
+      "noEmit": true                               // 开发时不输出文件
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+  }
