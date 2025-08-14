@@ -1,6 +1,6 @@
 {
     "name": "1password-config",
-    "version": "0.0.4",
+    "version": "1.0.0",
     "description": "1Password configuration utilities",
     "keywords": [
         "1password",
